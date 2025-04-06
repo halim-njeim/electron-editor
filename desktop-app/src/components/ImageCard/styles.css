@@ -1,0 +1,31 @@
+.image-card {
+  border: rgb(254, 254, 254, 0.2);
+  border-style: solid;
+  border-width: 0.01em;
+  width: fit-content;
+}
+
+footer p {
+  color: #fefefe;
+}
+
+.image {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  /* display: block; */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.image:hover {
+  transform: scale(120%);
+}

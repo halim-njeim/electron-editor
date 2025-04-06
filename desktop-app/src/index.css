@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #000000;
+}
+
+button {
+  border: none;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grow {
+  flex-grow: 2;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.rounded-border {
+  border-radius: 6px;
+}
+
+.pl {
+  padding: 1em;
+}
+
+.tm {
+  margin: 0.2em;
+}
+
+.div-margin {
+  margin: 2em;
+}
+
+.box-shadow-blue {
+  box-shadow: 2px 2px 2px #003092;
+}
+
+.cta {
+  background-color: #b771e5;
+  padding: 1em;
+}
+
+.white-bg {
+  background-color: #dbf5fd;
+}
+
+.black-bg {
+  background-color: #000000;
+}
+
+.grey-bg {
+  background: linear-gradient(135deg, #cedce7 0%, #596a72 100%);
+}
+
+.mont-font {
+  font-family: "Montserrat";
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/Montserrat-Medium.ttf");
+}
