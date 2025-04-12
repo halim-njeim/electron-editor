@@ -11,8 +11,10 @@ const ImageEditor = () => {
 
   return visible ? (
     <div className="image-editor flex column align-center justify-center full-height">
-      <div className="main-container black-bg pl rounded-border">
-        <img className="focused-image" src={url} alt="" />
+      <div className=" main-container black-bg pl rounded-border">
+        <div className="flex column align-center">
+          <img className="focused-image" src={url} alt="" />
+        </div>
         <div className="flex column align-center">
           <Button className="edit-btn" text="Rotate" />
           <Button className="edit-btn" text="B & A" />

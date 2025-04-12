@@ -8,8 +8,8 @@
 }
 
 .focused-image {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 500px;
+  max-width: 500px;
 }
 
 .edit-btn {
@@ -31,4 +31,5 @@
   border: rgb(254, 254, 254, 0.2);
   border-style: solid;
   border-width: 0.01em;
+  width: 40vw;
 }
