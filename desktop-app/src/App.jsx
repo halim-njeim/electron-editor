@@ -1,7 +1,14 @@
 import Home from "./pages/Home";
+import Chat from "./pages/Chat";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  return <Home />;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/chat" element={<Chat />} />
+    </Routes>
+  );
 }
 
 export default App;

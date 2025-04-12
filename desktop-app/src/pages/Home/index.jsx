@@ -9,7 +9,10 @@ const Home = () => {
     <div>
       <ImageEditorContextProvider>
         <NavBar />
-        <ImageCard imgUrl="src\assets\image.webp" />
+        <div className="flex">
+          <ImageCard imgUrl="src\assets\image.webp" />
+          <ImageCard imgUrl="src\assets\figma1.png" />
+        </div>
         <ImageEditor />
       </ImageEditorContextProvider>
     </div>

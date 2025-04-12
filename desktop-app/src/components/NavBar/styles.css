@@ -11,3 +11,12 @@ header {
   border-style: solid;
   border-width: 0.01em;
 }
+
+.btn-container {
+  width: 45%;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
