@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./styles.css";
 import { ImageEditorContext } from "../../contexts/ImageEditorContext";
 
-const ImageCard = ({ imgUrl, className }) => {
+const ImageCard = ({ imgUrl, className, number, description }) => {
   const { visible, setVisibility } = useContext(ImageEditorContext);
   const { setUrl } = useContext(ImageEditorContext);
 
@@ -18,8 +18,8 @@ const ImageCard = ({ imgUrl, className }) => {
         <img className="image rounded-border" src={imgUrl} alt="" />
       </div>
       <footer>
-        <p>Id: </p>
-        <p>Description: </p>
+        <p>Id: {number} </p>
+        <p className="description">Description: {description} </p>
       </footer>
     </div>
   );
