@@ -6,12 +6,13 @@ import { ImageEditorContext } from "../../contexts/ImageEditorContext";
 
 const ImageEditor = () => {
   const { visible, setVisibility } = useContext(ImageEditorContext);
-  const imgUrl = "src/assets/image.webp";
+  const { url, setUrl } = useContext(ImageEditorContext);
+  // const imgUrl = "src/assets/image.webp";
 
   return visible ? (
     <div className="image-editor flex column align-center justify-center full-height">
       <div className="main-container black-bg pl rounded-border">
-        <img className="focused-image" src={imgUrl} alt="" />
+        <img className="focused-image" src={url} alt="" />
         <div className="flex column align-center">
           <Button className="edit-btn" text="Rotate" />
           <Button className="edit-btn" text="B & A" />
@@ -22,6 +23,7 @@ const ImageEditor = () => {
             text="Cancel"
             onClick={() => {
               setVisibility(!visible);
+              setUrl("");
             }}
           />
           <Button text="Save" />

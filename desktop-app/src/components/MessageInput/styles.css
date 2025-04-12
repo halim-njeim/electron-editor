@@ -1,0 +1,20 @@
+.message-bar {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #303030;
+  border-radius: 25px;
+}
+
+.message-input {
+  width: 100%;
+}
+
+.message-input input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.send-btn {
+  border-radius: 100px;
+}
