@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import ImageCard from "../../components/ImageCard";
 import ImageEditor from "../../components/ImageEditor";

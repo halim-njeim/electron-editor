@@ -20,6 +20,23 @@ ipcMain.handle("get-file-name", (event, url) => {
   return path.basename(url);
 });
 
+ipcMain.handle("save-image", (event, name, arrayBuffer) => {
+  const fileDir = path.join(
+    require("os").homedir(),
+    "Desktop",
+    "Wallpapers",
+    "misc"
+  );
+  const imagePath = path.join(fileDir, name);
+
+  //This is what the buffer does?
+  const buffer = Buffer.from(arrayBuffer);
+
+  fs.writeFileSync(imagePath, buffer);
+
+  return true;
+});
+
 ipcMain.handle("get-images", (event) => {
   const imageFolder = path.join(
     require("os").homedir(),

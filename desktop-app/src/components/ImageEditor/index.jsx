@@ -7,7 +7,6 @@ import { ImageEditorContext } from "../../contexts/ImageEditorContext";
 const ImageEditor = () => {
   const { visible, setVisibility } = useContext(ImageEditorContext);
   const { url, setUrl } = useContext(ImageEditorContext);
-  // const imgUrl = "src/assets/image.webp";
 
   return visible ? (
     <div className="image-editor flex column align-center justify-center full-height">
