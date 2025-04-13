@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const fs = require("fs");
+const sharp = require("sharp");
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -36,6 +37,47 @@ ipcMain.handle("save-image", (event, name, arrayBuffer) => {
 
   return true;
 });
+
+ipcMain.handle(
+  "rotate-image",
+  async (event, fullPath, degrees = 90, overwrite = false) => {
+    const imageFolder = path.join(
+      require("os").homedir(),
+      "Desktop",
+      "Wallpapers",
+      "misc"
+    );
+    const outputPath = overwrite
+      ? fullPath
+      : path.join(imageFolder, "rotated_" + path.basename(fullPath));
+
+    await sharp(fullPath).rotate(degrees).toFile(outputPath);
+
+    return outputPath;
+  }
+);
+
+ipcMain.handle(
+  "apply-greyscale",
+  async (event, fullPath, outputName, overwrite = false) => {
+    const imageFolder = path.join(
+      require("os").homedir(),
+      "Desktop",
+      "Wallpapers",
+      "misc"
+    );
+    const outputPath = overwrite
+      ? fullPath
+      : path.join(
+          imageFolder,
+          outputName || "greyscale_" + path.basename(fullPath)
+        );
+
+    await sharp(fullPath).grayscale().toFile(outputPath);
+
+    return outputPath;
+  }
+);
 
 ipcMain.handle("get-images", (event) => {
   const imageFolder = path.join(
