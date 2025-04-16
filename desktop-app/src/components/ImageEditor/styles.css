@@ -5,12 +5,12 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(15, 6, 16, 0.82);
+  /* pointer-events: auto; */
 }
 
 .focused-image {
   max-height: 500px;
   max-width: 500px;
-
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;

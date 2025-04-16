@@ -9,4 +9,6 @@ contextBridge.exposeInMainWorld("electronAPI", {
     ipcRenderer.invoke("apply-greyscale", fullPath, outputName, overwrite),
   rotateImage: (fullPath, degrees, overwrite) =>
     ipcRenderer.invoke("rotate-image", fullPath, degrees, overwrite),
+  saveCroppedImage: (fullPath, buffer, overwrite) =>
+    ipcRenderer.invoke("save-cropped-image", fullPath, buffer, overwrite),
 });

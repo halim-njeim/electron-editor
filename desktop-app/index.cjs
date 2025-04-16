@@ -58,6 +58,26 @@ ipcMain.handle(
 );
 
 ipcMain.handle(
+  "save-cropped-image",
+  async (event, fullPath, buffer, overwrite = false) => {
+    const imageFolder = path.join(
+      require("os").homedir(),
+      "Desktop",
+      "Wallpapers",
+      "misc"
+    );
+
+    const outputPath = overwrite
+      ? fullPath
+      : path.join(imageFolder, "cropped_" + path.basename(fullPath));
+
+    await sharp(Buffer.from(buffer)).toFile(outputPath);
+
+    return outputPath;
+  }
+);
+
+ipcMain.handle(
   "apply-greyscale",
   async (event, fullPath, outputName, overwrite = false) => {
     const imageFolder = path.join(

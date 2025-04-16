@@ -98,3 +98,5 @@ button {
   font-family: "Montserrat";
   src: url("assets/Montserrat-Medium.ttf");
 }
+
+@import "react-image-crop/dist/ReactCrop.css";
