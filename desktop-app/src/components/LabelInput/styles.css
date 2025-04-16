@@ -1,0 +1,17 @@
+.label {
+  color: #fefefe;
+}
+
+.label-input input {
+  color: black;
+  height: 2.5em;
+  border: none;
+  outline: none;
+  padding: 0.2em;
+
+  font-family: "Montserrat";
+}
+
+.label-input {
+  height: 4em;
+}

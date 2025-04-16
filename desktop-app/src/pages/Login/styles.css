@@ -1,0 +1,22 @@
+.login-form {
+  height: 60vh;
+  width: 20vw;
+  border-style: solid;
+  border-color: rgb(254, 254, 254, 0.2);
+  border-width: 0.1em;
+  padding: 2em;
+}
+
+.login-form p {
+  color: #fefefe;
+  font-size: x-small;
+}
+
+.mid-container {
+  width: 100%;
+}
+
+.login-form a {
+  color: #fefefe;
+  font-size: x-small;
+}

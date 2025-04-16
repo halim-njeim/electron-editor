@@ -1,0 +1,22 @@
+.register-form {
+  height: 75vh;
+  width: 30vw;
+  border-style: solid;
+  border-color: rgb(254, 254, 254, 0.2);
+  border-width: 0.1em;
+  padding: 1em;
+}
+
+.register-form p {
+  color: #fefefe;
+  font-size: x-small;
+}
+
+.center-container {
+  width: 100%;
+}
+
+.register-form a {
+  color: #fefefe;
+  font-size: x-small;
+}
